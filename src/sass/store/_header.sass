@@ -1,0 +1,42 @@
+.ps-store-header
+  position: fixed
+  width: 100%
+  z-index: 10
+
+.ps-header-clearance
+  height: 104px
+
+.ps-mega-menu-list > li
+  > a::after
+    font-family: "Font Awesome 5 Free"
+    font-weight: 900
+    content: "\f078"
+    color: rgba(0, 0, 0, 0.225)
+  &:hover > .ps-mega-menu
+    display: block
+    z-index: 4
+
+.ps-mega-menu
+  position: absolute
+  display: none
+  border-top: 3px solid $primary
+  border-bottom-left-radius: 8px
+  border-bottom-right-radius: 8px
+  li
+    padding-top: .46rem
+    padding-bottom: 0.46rem
+
+.ps-search-form
+  max-width: 700px
+  input.form-control
+    border-top-left-radius: 50rem
+    border-bottom-left-radius: 50rem
+    border: 0
+  button.btn
+    border-top-right-radius: 50rem
+    border-bottom-right-radius: 50rem
+    max-width: 650px
+
+@include media-breakpoint-up(lg)
+  .ps-header-clearance
+    height: 132px

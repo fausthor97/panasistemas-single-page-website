@@ -1,0 +1,333 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>Panasistemas Telecomunicaciones</title>
+</head>
+<body class="ps-store ps-cart">
+
+<!-- SCREEN LOADER -->
+<style>
+    .ps-loading-screen {
+        position: fixed;
+        height: 100%;
+        width: 100%;
+        background-color: white;
+        z-index: 100000;
+        display: none;
+        opacity: 1;
+        transition: 1s all;
+        text-align: center;
+    }
+    .ps-loading-screen > div {
+        padding-top: 150px;
+    }
+    .ps-loading-screen img {
+    }
+</style>
+
+<div class="ps-loading-screen">
+    <div>
+        <img src="img/loading.gif">
+        <h3 style="font-size: 14px; font-family: sans-serif;">Cargando...</h3>
+    </div>
+</div>
+
+<script>
+    // if javascript enabled show loading screen
+    document.querySelector('.ps-loading-screen').style.display = "block";
+
+    // remove loading screen when content loaded
+    window.onload = function() {
+        function removeLoadingScreen() {
+            document.querySelector('.ps-loading-screen').style.display = "none";
+        }
+
+        document.querySelector('.ps-loading-screen').style.opacity = 0;
+        setTimeout(removeLoadingScreen, 1000);
+    };
+</script>
+<!-- /SCREEN LOADER -->
+
+<!-- HEADER -->
+<header class="ps-store-header bg-white">
+
+	<!-- MASTHEAD -->	
+	<div class="py-3 bg-white">
+		<div class="container d-flex justify-content-between align-items-center">
+
+			<!-- BRAND LOGO -->	
+			<a href="https://panasistemas.com" class="logo-text">Panasistemas</a>
+			<!-- /BRAND LOGO -->	
+
+			<ul class="nav ps-mega-menu-list d-none d-lg-flex">
+
+				<li class="nav-item">
+					<a href="#" class="nav-link">
+						Hardware
+					</a>
+					<div class="ps-mega-menu bg-light pb-3 shadow border-primary links-secondary">
+						<div class="container">
+							<div class="row">
+								<div class="col">
+									<ul class="list-unstyled">
+										<li class="pt-4 font-weight-bold">Componentes</li>
+										<li><a href="#">Accesorios para Componentes</a></li>
+										<li><a href="#">Almacenamiento</a></li>
+										<li><a href="#">Ensamblaje</a></li>
+										<li><a href="#">Tarjetas</a></li>
+									</ul>
+									<ul class="list-unstyled">
+										<li class="pt-4 font-weight-bold">Componentes</li>
+										<li><a href="#">Accesorios para Componentes</a></li>
+										<li><a href="#">Almacenamiento</a></li>
+										<li><a href="#">Ensamblaje</a></li>
+										<li><a href="#">Tarjetas</a></li>
+									</ul>
+								</div>
+								<div class="col">
+									<ul class="list-unstyled">
+										<li class="pt-4 font-weight-bold">Componentes</li>
+										<li><a href="#">Accesorios para Componentes</a></li>
+										<li><a href="#">Almacenamiento</a></li>
+										<li><a href="#">Ensamblaje</a></li>
+										<li><a href="#">Tarjetas</a></li>
+									</ul>
+									<ul class="list-unstyled">
+										<li class="pt-4 font-weight-bold">Componentes</li>
+										<li><a href="#">Accesorios para Componentes</a></li>
+										<li><a href="#">Almacenamiento</a></li>
+										<li><a href="#">Ensamblaje</a></li>
+										<li><a href="#">Tarjetas</a></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+				</li>
+
+				<li class="nav-item">
+					<a href="#" class="nav-link">
+						Software
+					</a>
+					<div id="software-mega-menu" class="ps-mega-menu">
+					</div>
+				</li>
+				<li class="nav-item">
+					<a href="#" class="nav-link">
+						Soluciones
+					</a>
+				</li>
+				<li class="nav-item">
+					<a href="#" class="nav-link">
+						Marcas
+					</a>
+				</li>
+			</ul>
+
+			<div class="d-none d-lg-flex">
+				<i class="fas fa-headset fa-2x fa-fw text-primary" style="position: relative; top: 8px;"></i>
+				<p class="m-0 ml-2"><b>Ventas y Cotizaciones</b><br>Llámenos al: 167-24-43</p>
+			</div>
+
+            <div class="d-lg-none text-primary">
+                <a href="#" class="mr-4">
+                    <i class="fas fa-shopping-cart fa-2x"></i>
+                </a>
+                <a id="sidr-button" href="#sidr-button">
+                    <i class="fas fa-align-justify fa-2x"></i>
+                </a>
+            </div>
+
+		</div>
+	</div>
+	<!-- /MASTHEAD -->	
+
+	<!-- /SEARCH BAR -->
+	<div class="py-2 bg-primary">
+		<div class="container d-flex align-items-center justify-content-between">
+
+            <span class="d-none d-lg-block text-light font-weight-bold">
+                Categorías Populares
+                <i class="fas fa-chevron-down"></i>	
+            </span>
+
+			<div class="input-group ps-search-form">
+				<input type="text" class="form-control pl-4" placeholder="Buscar Producto..." aria-label="Buscar Producto" aria-describedby="basic-addon2">
+				<div class="input-group-append">
+					<button class="btn btn-dark px-4" role="button">
+						<i class="fas fa-search"></i>				
+					</button>
+				</div>
+			</div>	
+
+            <a href="#" class="d-none d-lg-block text-light font-weight-bold">
+                <i class="fas fa-shopping-cart fa-lg ml-4 mr-1"></i>Carrito
+            </a>
+
+		</div>
+	</div>
+	<!-- /SEARCH BAR -->
+</header>
+
+<div class="ps-header-clearance"></div>
+<!-- /HEADER -->
+
+<!-- CATEGORIES SIDR -->
+<div id="sidr">
+	<ul>
+		<li>
+			<a href="#home">
+				Categoria
+			</a>
+		</li>
+		<li>
+			<a href="#home">
+				Categoria
+			</a>
+		</li>
+		<li>
+			<a href="#home">
+				Categoria
+			</a>
+		</li>
+		<li>
+			<a href="#home">
+				Categoria
+			</a>
+		</li>
+		<li>
+			<a href="#home">
+				Categoria
+			</a>
+		</li>
+		<li>
+			<a href="#home">
+				Categoria
+			</a>
+		</li>
+	</ul>
+</div>
+<!-- /CATEGORIES SIDR -->
+
+<!-- CONTENT BLOCK -->
+<div class="container content-block">
+
+    <a href="#" class="d-block mt-3 mb-2">&laquo; Regresar</a>
+    <!-- TITLE -->
+    <h1 class="h2">Tu Carrito</h1>
+    <!-- /TITLE -->
+
+    <hr>
+
+    <!-- PRODUCT -->
+    <div class="ps-product py-4 clearfix border p-3 px-lg-5 mb-3">
+
+        <h4><a href="#">Laptop HP 15-A</a></h4>
+
+        <div class="float-right text-right">
+            <p class="h4 font-weight-bold">$14,000 <span class="ps-product-currency">MXN</span></p>
+            <select class="form-control">
+              <option>1</option>
+              <option>2</option>
+              <option>3</option>
+              <option>4</option>
+              <option>5</option>
+            </select>
+            <a href="#" class="d-block mt-4">Remover</a>
+        </div>
+
+        <p>Clave: COMPQCP9060</p>
+        <a href="#">
+            <img class="img-fluid" src="img/laptop.jpg">
+        </a>
+    </div>
+    <!-- /PRODUCT -->
+
+    <!-- TOTAL -->
+    <p class="h2 font-weight-bold mt-5 text-right"><i>Total: </i>$42,500 <span class="ps-product-currency">MXN</span></p>
+    <!-- /TOTAL -->
+
+    <!-- SUBMIT BUTTON -->
+    <a href="#" class="btn btn-warning btn-lg btn-block mb-5 font-weight-bold">
+        <i class="fas fa-file-pdf mr-3 fa-lg"></i>Generar Cotización
+    </a>
+    <!-- SUBMIT BUTTON -->
+
+</div>
+<!-- CONTENT BLOCK -->
+
+<!-- FOOTER -->
+<footer>
+	<!-- FOOTER LINKS -->
+	<div class="text-light py-6 bg-dark">
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-6 col-md-3">
+					<h4>Compañía</h4>
+					<hr class="border-light">
+					<a class="d-block" href="#home">Inicio</a>
+					<a class="d-block" href="#services-section">Servicios</a>
+					<a class="d-block" href="#clients-section">Clientes</a>
+					<a class="d-block" href="#contact-section">Contacto</a>
+				</div>
+
+				<div class="col-sm-6 col-md-3 mt-5 mt-sm-0">
+					<h4>Servicios</h4>
+					<hr class="border-light">
+					<a class="d-block" href="#contacto">Telefonía</a>
+					<a class="d-block" href="#contacto">Telefonía SIP</a>
+					<a class="d-block" href="#contacto">Video Vigilancia</a>
+					<a class="d-block" href="#contacto">Cableado de Red</a>
+					<a class="d-block" href="#contacto">Control de Acceso</a>
+					<a class="d-block" href="#contacto">Alarmas</a>
+				</div>
+				
+				<div class="col-sm-6 col-md-3 mt-5 mt-md-0">
+					<h4>Tienda</h4>
+					<hr class="border-light">
+					<a class="d-block" href="#contacto">Hardware</a>
+					<a class="d-block" href="#contacto">Software</a>
+					<a class="d-block" href="#contacto">Soluciones</a>
+					<a class="d-block" href="#contacto">Marcas</a>
+					<a class="d-block" href="#contacto">Ofertas</a>
+				</div>
+
+
+				<div class="ps-certifications col-sm-6 col-md-3 text-center text-white-50 mt-5 mt-md-0">
+					<a href="http://www.grandstream.com/"><img class="img-fluid" src="img/grandstream-logo.png"></a>
+					<p>Grandstream Certified Expert</p>
+
+					<a href="https://www.panasonic.com/mx/"><img class="img-fluid mt-4" src="img/panasonic-logo2.png"></a>
+					<p>Distribuidor Autorizado</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- /FOOTER LINKS -->
+
+	<!-- FOOTER BOTTOM -->
+	<div id="footer-bottom" class="text-center bg-gray-900 py-4 text-white-50">
+		Copyright &copy; 2018 Panasistemas
+	</div>
+	<!-- /FOOTER BOTTOM -->
+</footer>
+<!-- FOOTER -->
+
+<!-- COOKIES MESSAGE -->
+<script>
+	function closeMessage() {
+		$(".cookies-message").fadeOut();
+	}
+</script>
+<div class="cookies-message py-5">
+	<div class="container text-light">
+		<p class="d-inline">Nuestro sitio web utiliza Cookies. Lee sobre ello en nuestro <a href="#" class="text-light" style="text-decoration: underline;">Aviso de Privacidad</a>.</p>
+		<button class="btn btn-dark float-right mt-3 mt-md-0" onclick="closeMessage()">Entendido</button>
+	</div>
+</div>
+<!-- /COOKIES MESSAGE -->
+
+</body>
+</html> 

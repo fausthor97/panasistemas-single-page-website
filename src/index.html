@@ -1,0 +1,526 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<title>Panasistemas Telecomunicaciones</title>
+
+
+</head>
+<body class="ps-store">
+
+<!-- SCREEN LOADER -->
+<style>
+    .ps-loading-screen {
+        position: fixed;
+        height: 100%;
+        width: 100%;
+        background-color: white;
+        z-index: 100000;
+        display: none;
+        opacity: 1;
+        transition: 1s all;
+        text-align: center;
+    }
+    .ps-loading-screen > div {
+        padding-top: 150px;
+    }
+    .ps-loading-screen img {
+    }
+</style>
+
+<div class="ps-loading-screen">
+    <div>
+        <img src="img/loading.gif">
+        <h3 style="font-size: 14px; font-family: sans-serif;">Cargando...</h3>
+    </div>
+</div>
+
+<script>
+    // if javascript enabled show loading screen
+    document.querySelector('.ps-loading-screen').style.display = "block";
+
+    // remove loading screen when content loaded
+    window.onload = function() {
+        function removeLoadingScreen() {
+            document.querySelector('.ps-loading-screen').style.display = "none";
+        }
+
+        document.querySelector('.ps-loading-screen').style.opacity = 0;
+        setTimeout(removeLoadingScreen, 1000);
+    };
+</script>
+<!-- /SCREEN LOADER -->
+
+<header id="home" class="d-none d-md-block">
+
+	<!-- MASTHEAD -->
+	<div class="bg-white py-5">
+		<div class="container">
+
+			<div class="row no-gutters">
+				<div class="col-4 col-lg-3">
+					<a href="https://panasistemas.com" class="logo-text float-left">Panasistemas</a>
+				</div>
+
+				<div class="ps-contact-icons col-4 col-lg-3 d-flex">
+					<div class="ps-contact-icon bg-primary text-light text-center float-left mr-2">
+						<i class="fas fa-phone fa-fw"></i>
+					</div>
+					<p class="pt-2"><b>Teléfono</b><br>(646) 177-83-61</p>
+				</div>
+
+				<div class="ps-contact-icons col-4 col-lg-3">
+					<div class="ps-contact-icon bg-primary text-light text-center float-left mr-2">
+						<i class="fas fa-envelope fa-fw"></i>
+					</div>
+					<p class="pt-2"><b>Email</b><br>contacto@panasistemas.com</p>
+				</div>
+
+				<div class="ps-contact-icons col-3 d-none d-lg-block">
+					<div class="ps-contact-icon bg-primary text-light text-center float-left mr-2">
+						<i class="fas fa-map-marker-alt fa-fw"></i>
+					</div>
+					<p class="pt-2"><b>Dirección</b><br>Ensenada BC, Ave. Diamante 2004-A</p>
+				</div>
+			</div>
+
+		</div>
+	</div>
+	<!-- MASTHEAD -->
+
+	<!-- HEADER NAV -->
+	<div class="bg-primary py-3">
+
+		<ul class="nav justify-content-center"> <!-- MAKE CLASS TO CHANGE ANCHOR TAGS COLOR -->
+			<li class="nav-item">
+				<a href="#home" class="nav-link text-light">
+					INICIO
+				</a>
+			</li>
+			<li class="nav-item">
+				<a href="#services-section" class="nav-link text-light">
+					SERVICIOS
+				</a>
+			</li>
+			<li class="nav-item">
+				<a href="#clients-section" class="nav-link text-light">
+					CLIENTES
+				</a>
+			</li>
+			<li class="nav-item">
+				<a href="#contact-section" class="nav-link text-light">
+					CONTACTO
+				</a>
+			</li>
+			<li class="nav-item" hidden>
+				<a href="store.html" class="nav-link text-light">
+					TIENDA
+				</a>
+			</li>
+
+		</ul>
+	</div>
+	<!-- /HEADER NAV -->
+</header>
+
+<!-- NAVBAR -->
+<nav id="site-navbar" class="ps-navbar py-3 bg-white border-bottom">
+	<div class="container d-flex justify-content-between align-items-center">
+
+		<!-- BRAND LOGO -->	
+		<a href="https://panasistemas.com" class="logo-text">Panasistemas</a>
+		<!-- /BRAND LOGO -->	
+
+		<!-- NAVBAR NAV -->
+		<ul class="nav d-none d-md-flex">
+			<li class="nav-item">
+				<a href="#home" class="nav-link">
+					INICIO
+				</a>
+			</li>
+			<li class="nav-item">
+				<a href="#services-section" class="nav-link">
+					SERVICIOS
+				</a>
+			</li>
+			<li class="nav-item">
+				<a href="#clients-section" class="nav-link">
+					CLIENTES
+				</a>
+			</li>
+			<li class="nav-item">
+				<a href="#contact-section" class="nav-link">
+					CONTACTO
+				</a>
+			</li>
+			<li class="nav-item d-md-none" hidden>
+				<a href="store.html" class="nav-link">
+					TIENDA
+				</a>
+			</li>
+		</ul>
+		<!-- /NAVBAR NAV -->
+
+		<!-- STORE BUTTON (MEDIUM VP) ####change d-md-none to d-md-inline -->
+		<a class="d-none d-md-none btn btn-primary px-3" href="https://tienda.panasistemas.com">
+			<i class="fas fa-shopping-bag mr-2"></i>Tienda
+		</a>
+		<!-- /STORE BUTTON (MEDIUM VP) -->
+
+
+		<!-- TOGGLE SIDE MENU -->
+		<a id="side-menu" href="#sidr-main" class="d-block d-md-none">
+			<i class="fas fa-align-justify fa-lg" style="font-size: 25px !important;"></i>	
+		</a>
+		<!-- /TOGGLE SIDE MENU -->
+	
+	</div>
+</nav>
+<!-- NAVBAR -->
+
+<!-- SIDE MENU -->
+<div id="sidr">
+	<ul>
+		<li>
+			<a href="#home" onclick="closeSidr()">
+				INICIO
+			</a>
+		</li>
+		<li>
+			<a href="#services-section" onclick="closeSidr()">
+				SERVICIOS
+			</a>
+		</li>
+		<li>
+			<a href="#clients-section" onclick="closeSidr()">
+				CLIENTES
+			</a>
+		</li>
+		<li>
+			<a href="#contact-section" onclick="closeSidr()">
+				CONTACTO
+			</a>
+		</li>
+		<li hidden>
+			<a href="store.html">
+				TIENDA
+			</a>
+		</li>
+	</ul>
+</div>
+<!-- /SIDE MENU -->
+
+<!-- GDPR COOKIES CONSENT -->
+<script>
+	function closeMessage() {
+		$("#gdpr-cookies-consent").fadeOut();
+	}
+</script>
+<div id="gdpr-cookies-consent" class="py-5" hidden>
+	<div class="container text-light">
+		<p class="d-inline">Nuestro sitio web utiliza Cookies. Lee sobre ello en nuestro <a href="#" class="text-light" style="text-decoration: underline;">Aviso de Privacidad</a>.</p>
+		<button class="btn btn-dark float-right mt-3 mt-md-0" onclick="closeMessage()">Entendido</button>
+	</div>
+</div>
+<!-- /GDPR COOKIES CONSENT -->
+
+<!-- PARALLAX -->
+<div class="parallax-window h-6" data-parallax="scroll" data-image-src="img/work-meeting.jpg">
+	<div class="overlay-dimmer">
+		<div class="container text-center text-light" style="padding-top: 240px;">
+	    	<h3 class="h2">#1 en Telefonía, Conmutadores, Redes, Telecomunicaciones</h3>
+		    <a href="#services-section" class="mt-4 btn btn-primary btn-lg">Conoce Nuestros Servicios</a>
+		</div>
+	</div>
+</div>
+<!-- /PARALLAX -->
+
+<!-- INFO SECTION 1 -->
+<div class="container py-6 bg-light">
+	<div class="row">
+		<div class="col-12 col-md-6">
+			<h3 class="pb-4">La Confianza es lo Primero.</h3>
+			<p>
+				Llevamos más de 25 años sirviendo a la comunidad empresarial. Procurando siempre brindar un servicio de calidad y confianza.
+			</p>
+			<blockquote class="blockquote border-primary pl-3" style="border-left: 5px solid">
+				<i>Impulsamos el desarrollo de las empresas provisionandoles la infraestructura necesaria.</i>
+			</blockquote>
+		</div>
+		<div class="col-12 col-md-6 pt-5 pt-md-0">
+			<img class="img-fluid" src="img/e-switch.jpg">
+		</div>
+	</div>
+</div>
+<!-- /INFO SECTION 1 -->
+
+<!-- SERVICES SECTION -->
+<section id="services-section" class="py-6">
+	<div class="container text-center">
+		<h2 class="h1 font-weight-bold">Nuestros Servicios</h2>
+		<p>Descubre cómo podemos trabajar para el beneficio de tu empresa.</p>
+		<div id="ps-services-boxes" class="row pt-5">
+
+			<div class="col-12 col-md-6 col-lg-4 pb-4 pb-md-5 pt-sm-3">
+				<div class="text-center text-body border p-0" style="height: 100%">
+					<div class="bg-primary text-light" style="width: 80px; height: 80px; position: absolute; line-height: 80px; font-size: 22px;">
+						<i class="fas fa-mobile-alt fa-fw fa-lg"></i>	
+					</div>
+					<img class="img-fluid" src="img/telefonia-sip.jpg" alt-text="Imagen Telefonía SIP">
+					<div class="p-4">
+						<h5 class="font-weight-bold">
+							Telefonía SIP
+						</h5>
+						<p>Reemplaza tu línea analógica o digital por una Línea SIP de Voz IP y disfruta de un servicio de telefonía con múltiples funcionalidades desde tu smartphone.</p>
+						<a href="#contact-section" class="font-weight-bold text-body">
+							SOLICITAR COTIZACIÓN <i class="fas fa-chevron-right fa-xs"></i>
+						</a>
+					</div>
+				</div>
+			</div>
+			<div class="col-12 col-md-6 col-lg-4 pb-4 pb-md-5 pt-sm-3">
+				<div class="text-center text-body border p-0" style="height: 100%">
+					<div class="bg-primary text-light" style="width: 80px; height: 80px; position: absolute; line-height: 80px; font-size: 22px;">
+						<i class="fas fa-video fa-fw fa-lg"></i>	
+					</div>
+					<img class="img-fluid" src="img/video-vigilancia.jpg" alt-text="Imagen Video Vigilancia">
+					<div class="p-4">
+						<h5 class="font-weight-bold">
+							Video Vigilancia
+						</h5>
+						<p>El servicio de video vigilancia le permitirá observar lo que sucede en su hogar vía remota a través de internet en tiempo real o realizar grabaciones de lo que acontece cuando no se encuentre físicamente en él.</p>
+						<a href="#contact-section" class="font-weight-bold text-body">
+							SOLICITAR COTIZACIÓN <i class="fas fa-chevron-right fa-xs"></i>
+						</a>
+					</div>
+				</div>
+			</div>
+			<div class="col-12 col-md-6 col-lg-4 pb-4 pb-md-5 pt-sm-3">
+				<div class="text-center text-body border p-0" style="height: 100%">
+					<div class="bg-primary text-light" style="width: 80px; height: 80px; position: absolute; line-height: 80px; font-size: 22px;">
+						<i class="fas fa-network-wired fa-fw fa-lg"></i>	
+					</div>
+					<img class="img-fluid" src="img/e-switch.jpg" alt-text="Imagen Cableado de Red">
+					<div class="p-4">
+						<h5 class="font-weight-bold">
+							Cableado de Red
+						</h5>
+						<p>Nuestras soluciones de conectividad e implantación le proporcionamos infraestructuras y redes inalámbricas, fibra óptica y cobre que habilitan una gran cantidad de servicios de comunicaciones.</p>
+						<a href="#contact-section" class="font-weight-bold text-body">
+							SOLICITAR COTIZACIÓN <i class="fas fa-chevron-right fa-xs"></i>
+						</a>
+					</div>
+				</div>
+			</div>
+			<div class="col-12 col-md-6 col-lg-4 pb-4 pb-md-5 pt-sm-3">
+				<div class="text-center text-body border p-0" style="height: 100%">
+					<div class="bg-primary text-light" style="width: 80px; height: 80px; position: absolute; line-height: 80px; font-size: 22px;">
+						<i class="fas fa-phone fa-fw fa-lg"></i>	
+					</div>
+					<img class="img-fluid" src="img/telefonia.jpg" alt-text="Imagen Telefonía">
+					<div class="p-4">
+						<h5 class="font-weight-bold">
+							Telefonía
+						</h5>
+						<p>Comunica de manera eficiente las distintas áreas dentro de tu empresa y optimiza su funcionalidad mediante la programación de extensiones, areas de timbrado, contestadoras, etc.</p>
+						<a href="#contact-section" class="font-weight-bold text-body">
+							SOLICITAR COTIZACIÓN <i class="fas fa-chevron-right fa-xs"></i>
+						</a>
+					</div>
+				</div>
+			</div>
+			<div class="col-12 col-md-6 col-lg-4 pb-4 pb-md-5 pt-sm-3">
+				<div class="text-center text-body border p-0" style="height: 100%">
+					<div class="bg-primary text-light" style="width: 80px; height: 80px; position: absolute; line-height: 80px; font-size: 22px;">
+						<i class="fas fa-fingerprint fa-fw fa-lg"></i>	
+					</div>
+					<img class="img-fluid" src="img/control-acceso.jpg" alt-text="Imagen Control de Acceso">
+					<div class="p-4">
+						<h5 class="font-weight-bold">
+							Control de Acceso
+						</h5>
+						<p>Obtén registro de las horas trabajadas por cada empleado. De esta forma, el gestor sabe si el profesional hizo horas extras e incluso si cumplió con lo previsto en el contrato, lo que posibilita el pago correcto en empresas con salarios.</p>
+						<a href="#contact-section" class="font-weight-bold text-body">
+							SOLICITAR COTIZACIÓN <i class="fas fa-chevron-right fa-xs"></i>
+						</a>
+					</div>
+				</div>
+			</div>
+			<div class="col-12 col-md-6 col-lg-4 pb-4 pb-md-5 pt-sm-3">
+				<div class="text-center text-body border p-0 h-100">
+					<div class="bg-primary text-light" style="width: 80px; height: 80px; position: absolute; line-height: 80px; font-size: 22px;">
+						<i class="fas fa-broadcast-tower fa-fw fa-lg"></i>	
+					</div>
+					<img class="img-fluid" src="img/alarmas.jpg" alt-text="Imagen Instalacion de Alarmas">
+					<div class="p-4">
+						<h5 class="font-weight-bold">
+							Alarmas
+						</h5>
+						<p>Protege tu establecimiento, proveemos confianza y seguridad mediante la instalación y programación de alarmas domiciliarias o para su empresa.</p>
+						<a href="#services-section" class="font-weight-bold text-body">
+							SOLICITAR COTIZACIÓN <i class="fas fa-chevron-right fa-xs"></i>
+						</a>
+					</div>
+				</div>
+			</div>
+
+		</div>
+	</div>
+</section>
+<!-- /SERVICES SECTION -->
+
+
+
+<!-- CLIENTS SECTION -->
+<section class="py-5 bg-primary text-light">
+	<div class="container">
+		<h4 class="h2 font-weight-bold">Aquí algunos de Nuestros Clientes</h4>
+		<p class="h4 pt-3"><i class="fas fa-check pr-3"></i>Satisfacción Garantizada</p>
+	</div>
+</section>
+<section id="clients-section" class="py-5">
+
+	<div class="container text-center">
+
+		<div class="row clients-row">
+
+			<div class="col-6 col-md-3 px-5">
+				<img class="img-fluid" src="img/cemex-logo.png">
+			</div>
+			<div class="col-6 col-md-3">
+				<img class="img-fluid" src="img/tersa-logo.png">
+			</div>
+			<div class="col-6 col-md-3">
+				<img class="img-fluid" src="img/mareavista-logo.png">
+			</div>
+			<div class="col-6 col-md-3">
+				<img class="img-fluid" src="img/xochicalco.png">
+			</div>
+			<div class="col-6 col-md-3">
+				<img class="img-fluid" src="img/rudametkin-logo.png">
+			</div>
+			<div class="col-6 col-md-3">
+				<img class="img-fluid" src="img/velmar-logo.png">
+			</div>
+			<div class="col-6 col-md-3">
+				<img class="img-fluid" src="img/factory1-logo.jpeg">
+			</div>
+			<div class="col-6 col-md-3">
+				<img class="img-fluid" src="img/uabc-logo.jpg">
+			</div>
+
+		</div>
+	</div>
+</section>
+<!-- /CLIENTS SECTION -->
+
+<!-- CALL TO ACTION -->
+<section class="bg-primary text-light py-6">
+	<div class="container d-md-flex justify-content-between align-items-center">
+		<div>
+			<h3 class="h1"><b>
+				Solicita una Cotización
+			</b></h3>
+			<p class="lead">Obtén información sobre los costos y el equipamento para tu proyecto.</p>
+		</div>
+		<a href="#contact-section" class="btn btn-lg btn-dark d-block">Solicitar Cotización</a>
+	</div>
+</section>
+<!-- /CALL TO ACTION -->
+
+<!-- CONTACT SECTION -->
+<section id="contact-section">
+	<div class="overlay-dimmer py-6">
+		<div class="container">
+
+			<div class="text-light ml-auto" style="max-width: 500px">
+				<h2 class="h1">Contacto</h2>
+				<hr class="border-light mb-4">
+				<div class="clearfix pb-5">
+					<div class="ps-contact-icon bg-primary text-light text-center float-left mr-2">
+						<i class="fas fa-phone fa-fw"></i>
+					</div>
+					<p class="pt-2 pt-md-1"><b>Teléfono</b><br>(646) 177-83-61</p>
+				</div>
+
+				<div class="clearfix pb-5">
+					<div class="ps-contact-icon bg-primary text-light text-center float-left mr-2">
+						<i class="fas fa-envelope fa-fw"></i>
+					</div>
+					<p class="pt-2 pt-md-1"><b>Email</b><br>contacto@panasistemas.com</p>
+				</div>
+
+				<div class="clearfix pb-5">
+					<div class="ps-contact-icon bg-primary text-light text-center float-left mr-2">
+						<i class="fas fa-map-marker-alt fa-fw"></i>
+					</div>
+					<p class="pt-2 pt-md-1"><b>Dirección</b><br>Ensenada BC, Ave. Diamante 2004-A</p>
+				</div>
+			</div>
+
+		</div>
+	</div>
+</section>
+<!-- /CONTACT SECTION -->
+
+<footer>
+	<!-- FOOTER LINKS -->
+	<div class="text-light py-6 bg-dark">
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-6 col-md-3">
+					<h4>Navegación</h4>
+					<hr class="border-white-50">
+					<a class="d-block" href="#home">Inicio</a>
+					<a class="d-block" href="#services-section">Servicios</a>
+					<a class="d-block" href="#clients-section">Clientes</a>
+					<a class="d-block" href="#contact-section">Contacto</a>
+				</div>
+
+				<div class="col-sm-6 col-md-3 mt-5 mt-sm-0">
+					<h4>Servicios</h4>
+					<hr class="border-white-50">
+					<a class="d-block" href="#services-section">Telefonía</a>
+					<a class="d-block" href="#services-section">Telefonía SIP</a>
+					<a class="d-block" href="#services-section">Video Vigilancia</a>
+					<a class="d-block" href="#services-section">Cableado de Red</a>
+					<a class="d-block" href="#services-section">Control de Acceso</a>
+					<a class="d-block" href="#services-section">Alarmas</a>
+				</div>
+				
+				<div class="col-sm-6 col-md-3 mt-5 mt-md-0" hidden>
+					<h4>Tienda</h4>
+					<hr class="border-light">
+					<a class="d-block" href="#contacto">Hardware</a>
+					<a class="d-block" href="#contacto">Software</a>
+					<a class="d-block" href="#contacto">Soluciones</a>
+					<a class="d-block" href="#contacto">Marcas</a>
+					<a class="d-block" href="#contacto">Ofertas</a>
+				</div>
+
+				<div class="ps-certifications col-sm-6 col-md-3 text-center text-white-50 mt-5 mt-md-0 pt-5 pt-sm-0">
+					<a href="http://www.grandstream.com/"><img class="img-fluid" src="img/grandstream-logo.png"></a>
+					<p class="pt-3">Grandstream Certified Expert</p>
+				</div>
+
+				<div class="ps-certifications col-sm-6 col-md-3 text-center text-white-50 mt-5 mt-md-0">
+					<a href="https://www.panasonic.com/mx/"><img class="img-fluid" src="img/panasonic-logo2.png"></a>
+					<p class="pt-3">Distribuidor Autorizado</p>
+				</div>
+
+			</div>
+		</div>
+	</div>
+	<!-- /FOOTER LINKS -->
+
+	<!-- FOOTER BOTTOM -->
+	<div id="footer-bottom" class="text-center bg-gray-900 py-4 text-white-50">
+		Copyright &copy; 2018 Panasistemas
+	</div>
+	<!-- /FOOTER BOTTOM -->
+</footer>
+
+</body>
+</html>
