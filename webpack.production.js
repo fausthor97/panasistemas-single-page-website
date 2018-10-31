@@ -1,9 +1,11 @@
-const UglifyJsPlugin = require("uglifyjs-webpack-plugin");
-const OptimizeCSSAssetsPlugin = require("optimize-css-assets-webpack-plugin");
-const path = require('path');
-const MiniCssExtractPlugin = require("mini-css-extract-plugin");
-const webpack = require('webpack');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
+const
+  UglifyJsPlugin = require("uglifyjs-webpack-plugin"),
+  OptimizeCSSAssetsPlugin = require("optimize-css-assets-webpack-plugin"), 
+  path = require('path'), 
+  MiniCssExtractPlugin = require("mini-css-extract-plugin"),
+  webpack = require('webpack'),
+  HtmlWebpackPlugin = require('html-webpack-plugin'),
+  FaviconsWebpackPlugin = require('favicons-webpack-plugin');
 
 module.exports = {
     entry: './src/index.js',
@@ -72,23 +74,28 @@ module.exports = {
     },
     plugins: [
         new HtmlWebpackPlugin({
+            title: 'Comprar - Panasistemas',
             filename: 'cart.html',
             template: 'src/cart.html'
         }),
         new HtmlWebpackPlugin({
+            title: 'Tienda - Panasistemas',
             filename: 'store.html',
             template: 'src/store.html'
         }),
         new HtmlWebpackPlugin({
+            title: 'Panasistemas Telecomunicaciones',
             filename: 'index.html',
             template: 'src/index.html'
         }),
         new MiniCssExtractPlugin({
             filename: "style.[contenthash].css"
         }),
+        new FaviconsWebpackPlugin('./src/images/favicon.png'),
         new webpack.ProvidePlugin({
             $: 'jquery',
-            jQuery: 'jquery'
+            jQuery: 'jquery',
+            'window.jQuery': 'jquery'
         })
     ]
 };

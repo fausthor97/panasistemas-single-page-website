@@ -1,12 +1,13 @@
-const webpack = require('webpack');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
+const
+  webpack = require('webpack'),
+  HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
     mode: 'development',
     module: {
         rules: [
             {
-                test: /\.(css|sass)$/,
+                test: /\.(css|sass|scss)$/,
                 use: [
                     "style-loader",
                     "css-loader",
@@ -14,18 +15,12 @@ module.exports = {
                 ]
             },
             {
-                test: /\.(png|jpg|jpeg)$/,
+                test: /\.(png|jpg|jpeg|gif)$/,
                 use: {
                     loader: 'file-loader',
                     options: {
                         name: "./img/[name].[ext]",
                     }
-                }
-            },
-            {
-                test: /\.gif$/,
-                use: {
-                    loader: 'url-loader'
                 }
             },
             {
@@ -50,20 +45,24 @@ module.exports = {
     },
     plugins: [
         new HtmlWebpackPlugin({
+            title: 'Comprar - Panasistemas',
             filename: 'cart.html',
             template: 'src/cart.html'
         }),
         new HtmlWebpackPlugin({
+            title: 'Tienda - Panasistemas',
             filename: 'store.html',
             template: 'src/store.html'
         }),
         new HtmlWebpackPlugin({
+            title: 'Panasistemas Telecomunicaciones',
             filename: 'index.html',
             template: 'src/index.html'
         }),
         new webpack.ProvidePlugin({
             $: 'jquery',
-            jQuery: 'jquery'
+            jQuery: 'jquery',
+            'window.jQuery': 'jquery'
         })
     ]
 };
