@@ -1,7 +1,3 @@
-
-// COMPLETE PROJECT BUILD: OPTIMIZED, BUNDLED, HASHED... BUILT!
-// TAKES A WHILE THOUGH...
-
 const
   UglifyJsPlugin = require("uglifyjs-webpack-plugin"),
   OptimizeCSSAssetsPlugin = require("optimize-css-assets-webpack-plugin"), 
