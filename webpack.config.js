@@ -1,3 +1,10 @@
+
+// THIS CONFIGURATION IS OPTIMIZED FOR BUILD SPEED
+// IT IS MEANT TO BE USED IN WATCH MODE, ADD A DEV
+// SERVER Y YOU USE ONE, PERSONALLY I DON'T MIND
+// REFRESHING THE BROWSER (I SERVE ALL MY PROJECTS
+// FOLDERS WITH NGINX AT LOCALHOST).
+
 const
   webpack = require('webpack'),
   HtmlWebpackPlugin = require('html-webpack-plugin');
@@ -37,7 +44,7 @@ module.exports = {
                 use: {
                     loader: 'html-loader',
                     options: {
-                        attrs: [':data-image-src','img:src']
+                        attrs: ['li:data-src', 'li:data-thumb', ':data-image-src','img:src']
                     }
                 }
             }
@@ -45,17 +52,18 @@ module.exports = {
     },
     plugins: [
         new HtmlWebpackPlugin({
-            title: 'Comprar - Panasistemas',
+            filename: 'product.html',
+            template: 'src/product.html'
+        }),
+        new HtmlWebpackPlugin({
             filename: 'cart.html',
             template: 'src/cart.html'
         }),
         new HtmlWebpackPlugin({
-            title: 'Tienda - Panasistemas',
             filename: 'store.html',
             template: 'src/store.html'
         }),
         new HtmlWebpackPlugin({
-            title: 'Panasistemas Telecomunicaciones',
             filename: 'index.html',
             template: 'src/index.html'
         }),

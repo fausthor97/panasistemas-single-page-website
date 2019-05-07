@@ -1,7 +1,3 @@
-
-// COMPLETE PROJECT BUILD: OPTIMIZED, BUNDLED, HASHED... BUILT!
-// TAKES A WHILE THOUGH...
-
 const
   UglifyJsPlugin = require("uglifyjs-webpack-plugin"),
   OptimizeCSSAssetsPlugin = require("optimize-css-assets-webpack-plugin"), 
@@ -14,7 +10,7 @@ const
 module.exports = {
     entry: './src/index.js',
     output: {
-        filename: 'scripts.[hash].js',
+        filename: 'scripts.js',
         path: path.resolve(__dirname, 'dist')
     },
     mode: 'production',
@@ -98,9 +94,12 @@ module.exports = {
             template: 'src/index.html'
         }),
         new MiniCssExtractPlugin({
-            filename: "style.[contenthash].css"
+            filename: "style.css"
         }),
-        new FaviconsWebpackPlugin('./src/images/favicon.png'),
+        new FaviconsWebpackPlugin({
+            logo: './src/images/favicon.png',
+            prefix: 'icons/'
+        }),
         new webpack.ProvidePlugin({
             $: 'jquery',
             jQuery: 'jquery',

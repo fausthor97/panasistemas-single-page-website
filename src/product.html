@@ -1,0 +1,644 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>Tienda - Panasistemas</title>
+<link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto:700" rel="stylesheet">
+</head>
+<body class="ps-store">
+
+<!-- SCREEN LOADER -->
+<style>
+    .ps-loading-screen {
+        position: fixed;
+        height: 100%;
+        width: 100%;
+        background-color: white;
+        z-index: 100000;
+        display: none;
+        opacity: 1;
+        transition: 1s all;
+        text-align: center;
+    }
+    .ps-loading-screen > div {
+        padding-top: 150px;
+    }
+    .ps-loading-screen img {
+    }
+</style>
+
+<div class="ps-loading-screen">
+    <div>
+        <img src="images/final/loading.gif">
+        <h3 style="font-size: 14px; font-family: sans-serif;">Cargando...</h3>
+    </div>
+</div>
+
+<script>
+    // if javascript enabled show loading screen
+    document.querySelector('.ps-loading-screen').style.display = "block";
+
+    // remove loading screen when content loaded
+    window.onload = function() {
+        function removeLoadingScreen() {
+            document.querySelector('.ps-loading-screen').style.display = "none";
+        }
+
+        document.querySelector('.ps-loading-screen').style.opacity = 0;
+        setTimeout(removeLoadingScreen, 1000);
+    };
+</script>
+<!-- /SCREEN LOADER -->
+
+<!-- HEADER -->
+<header class="ps-store-header shadow bg-white">
+
+	<!-- MASTHEAD -->	
+	<div class="py-3 bg-white">
+		<div class="container d-flex justify-content-between align-items-center">
+
+			<!-- BRAND LOGO -->	
+			<a href="https://panasistemas.com" class="logo-text">Panasistemas</a>
+			<!-- /BRAND LOGO -->	
+
+			
+<ul class="nav ps-mega-menu-list d-none d-lg-flex">
+    <li class="nav-item">
+        <a href="#" class="nav-link">
+            Hardware
+        </a>
+        <div class="ps-mega-menu bg-light pb-3 shadow border-primary links-secondary">
+            <div class="container">
+                <div class="hardware-categories row">
+                    <div class="col"><ul class="list-unstyled"><li class="pt-4 font-weight-bold">COMPONENTES </li><li><a href="/Almacenamiento/Discos-Duros/">Discos Duros</a></li><li><a href="/Ensamble/Monitores/">Monitores</a></li><li><a href="/Ensamble/Memorias-RAM/">Memorias Ram</a></li><li><a href="/Almacenamiento/SSD/">SSD</a></li><li><a href="/Ensamble/Motherboards/">MotherBoards</a></li><li><a href="/Ensamble/Microprocesadores/">MicroProcesadores</a></li><li><a href="/Tarjetas/Tarjetas-de-Video/">Tarjeta de Video</a></li><li><a href="/Ensamble/Gabinetes-para-Computadoras">Gabinetes para Computadoras</a></li><li><a href="/Ensamble/Enfriamiento-y-Ventilacion/">Enfriamento y Ventilacion</a></li><li><a href="/Almacenamiento/Almacenamiento-Externo/">Almacenamiento Externo</a></li><li><a href="/Tarjetas/Tarjetas-de-Sonido/">Tarjetas de Sonido</a></li><li><a href="/Tarjetas/Tarjetas-Seriales/">Tarjetas Seriales</a></li><li><a href="/Tarjetas/Tarjetas-FireWire/">Tarjetas Firewire</a></li><li><a href="/Tarjetas/Tarjetas-Paralelas/">Tatjetas Paralelas</a></li></ul></div><div class="col"><ul class="list-unstyled"><li class="pt-4 font-weight-bold">COMPUTADORAS </li><li><a href="/Computadoras/Laptops">Laptops</a></li><li><a href="/Computadoras/PCs-de-Escritorio">PCs de Escritorio</a></li><li><a href="/Computadoras/Tabletas">Tabletas</a></li><li><a href="/Computadoras/All-in-One">All in One</a></li><li><a href="/Accesorios-para-Computo/Accesorios-para-Laptops">Accesorios para Laptops</a></li><li><a href="/Apple/Accesorios-para-Apple">Accesorios para Apple</a></li><li><a href="/Apple/MacBook">MacBok</a></li><li><a href="/Apple/iPad">Ipad</a></li><li><a href="/Apple/iMac">IMac</a></li><li><a href="/Apple/Mac-Pro">Mac Pro</a></li><li><a href="/Accesorios-para-Computo/Accesorios-para-Tabletas">Accesorios para Tabletas</a></li><li><a href="/Workstations">Workstations</a></li></ul></div><div class="col"><ul class="list-unstyled"><li class="pt-4 font-weight-bold">CONECTIVIDAD </li><li><a href="/Adaptadores">Adaptadores</a></li><li><a href="/Cables">Cables</a></li><li><a href="/Domotica">Domotica</a></li><li><a href="/Red-Activa">Red Activa</a></li><li><a href="/Red-Pasiva">Red Pasiva</a></li></ul></div><div class="col"><ul class="list-unstyled"><li class="pt-4 font-weight-bold">ELECTRÓNICA </li><li><a href="/Linea-Blanca">Línea Blanca</a></li><li><a href="/Almacenamiento-Portatil">Almacenamiento Portátil</a></li><li><a href="/Electronica">Electrónica</a></li><li><a href="/Audio">Audio</a></li><li><a href="/Accesorios-para-Electronica">Accesorios para Electrónica</a></li></ul></div><div class="col"><ul class="list-unstyled"><li class="pt-4 font-weight-bold">ENERGÍA </li><li><a href="/Accesorios-para-Energia">Accesorios para Energía</a></li><li><a href="/Baterias-Banks">Baterías y Reemplazos</a></li><li><a href="/Modulos-Supresores">Módulos Supresores</a></li><li><a href="/Respaldo-y-Regulacion">Respaldo y Regulación</a></li></ul></div><div class="col"><ul class="list-unstyled"><li class="pt-4 font-weight-bold">GAMING </li><li><a href="/Accesorios-Gaming">Accesorios Gaming</a></li><li><a href="/Computadoras-Gaming/Laptops-Gaming">Laptops Gaming</a></li><li><a href="/Computadoras-Gaming/Monitores-Gaming">Monitores Gaming</a></li><li><a href="/Computadoras-Gaming/PCs-de-Escritorio-Gaming">PCs de Escritorio Gaming</a></li></ul></div><div class="col"><ul class="list-unstyled"><li class="pt-4 font-weight-bold">IMPRESIÓN </li><li><a href="/Accesorios-para-Impresion">Accesorios para Impresión</a></li><li><a href="/Consumibles">Consumibles</a></li><li><a href="/Digitalizacion-de-Imagenes">Digitalización de Imágenes</a></li><li><a href="/Impresion">Impresión</a></li></ul></div><div class="col"><ul class="list-unstyled"><li class="pt-4 font-weight-bold">PUNTO DE VENTA </li><li><a href="/Accesorios-y-Consumibles-POS">Accesorios y Consumibles POS</a></li><li><a href="/Credencializacion">Credencialización</a></li><li><a href="/Perifericos-para-POS">Periféricos para POS</a></li><li><a href="/Sistemas-de-Control">Sistemas de Control</a></li></ul></div><div class="col"><ul class="list-unstyled"><li class="pt-4 font-weight-bold">RESPALDO Y PROTECCIÓN DE ALTA CAPACIDAD </li><li><a href="/Respaldo-y-Proteccion-de-Alta-Capacidad/Centro-para-Datos">Centro de Datos</a></li><li><a href="/Respaldo-y-Proteccion-de-Alta-Capacidad/Interactivo">Interactivo</a></li><li><a href="/Respaldo-y-Proteccion-de-Alta-Capacidad/Online">Online</a></li><li><a href="/Energia-Solar-y-Eolica">Energía Solar y Eólica</a></li></ul></div><div class="col"><ul class="list-unstyled"><li class="pt-4 font-weight-bold">SEÑALIZACION DIGITAL </li><li><a href="/Senalizacion-Digital/Pantallas-Profesionales">Pantallas Profesionales</a></li><li><a href="/Senalizacion-Digital/Pizarrones-Interactivos">Pizarrones Interactivos</a></li><li><a href="/Senalizacion-Digital/Senalizacion-Inteligente">Señalización Inteligente</a></li><li><a href="/Senalizacion-Digital/Video-Digital">Video Digital</a></li></ul></div>
+                </div>
+            </div>
+        </div>
+    </li>
+    <li class="nav-item">
+        <a href="#" class="nav-link">
+            Software
+        </a>
+        <div class="ps-mega-menu bg-light pb-3 shadow border-primary links-secondary">
+            <div class="container">
+                <div class="software-categories row">
+                    <div class="col"><ul class="list-unstyled"><li class="pt-4 font-weight-bold">CAJA</li><li><a href="/Sistemas-Operativos">Sistemas Operativos</a></li><li><a href="/Software-POS">Software POS</a></li><li><a href="/Seguridad">Seguridad</a></li><li><a href="/Sistemas Contables">Sistemas Contables</a></li><li><a href="/Productividad">Productividad</a></li><li><a href="/Diseno">Diseño</a></li></ul></div><div class="col"><ul class="list-unstyled"><li class="pt-4 font-weight-bold">ESD</li><li><a href="/ESD/Aplicaciones-de-Negocios">Aplicaciones de Negocios</a></li><li><a href="/ESD/Aplicaciones-de-Seguridad">Aplicaciones de Seguridad</a></li></ul></div>
+                    <link>
+                </div>
+            </div>
+        </div>
+    </li>
+    <li class="nav-item">
+        <a href="#" class="nav-link">
+            Soluciones
+        </a>
+        <div class="ps-mega-menu bg-light pb-3 shadow border-primary links-secondary">
+            <div class="container">
+                <div class="soluciones-categories row">
+                    <div class="col"><ul class="list-unstyled"><li class="pt-4 font-weight-bold">COMUNICACIONES </li><li><a href="/Conmutadores-PBX">Conmutadores PBX</a></li><li><a href="/Tarjetas-para-Telefonia">Tarjetas para Telefonia</a></li><li><a href="/Telefonos">Telefonos</a></li><li><a href="/Conferencias">Conferencias</a></li><li><a href="/Sistemas-de-Correo-de-Voz">Sistemas de Correo de Voz</a></li><li><a href="/Auriculares-y-Diademas">Auriculares y Diademas</a></li><li><a href="/Comunicaciones/Accesorios-para-Telefonia">Accesorios para Telefonia</a></li></ul></div><div class="col"><ul class="list-unstyled"><li class="pt-4 font-weight-bold">REDES </li><li><a href="/Redes/Accesorios-de-Redes">Accesorios de Redes</a></li><li><a href="/Redes/Networking">Networking</a></li></ul></div><div class="col"><ul class="list-unstyled"><li class="pt-4 font-weight-bold">RESPALDO Y PROTECCIÓN DE ALTA CAPACIDAD </li><li><a href="/Respaldo-y-Proteccion-de-Alta-Capacidad/Centro-para-Datos">Centro de Datos</a></li><li><a href="/Respaldo-y-Proteccion-de-Alta-Capacidad/Interactivo">Interactivo</a></li><li><a href="/Respaldo-y-Proteccion-de-Alta-Capacidad/Online">Online</a></li><li><a href="/Energia-Solar-y-Eolica">Energía Solar y Eólica</a></li></ul></div><div class="col"><ul class="list-unstyled"><li class="pt-4 font-weight-bold">SEGURIDAD ELECTRÓNICA </li><li><a href="/Seguridad-Electronica/Corporativos">Corporativos</a></li><li><a href="/Seguridad-Electronica/Pequenos-Negocios">Pequeños Negocios</a></li></ul></div><div class="col"><ul class="list-unstyled"><li class="pt-4 font-weight-bold">SEÑALIZACION DIGITAL </li><li><a href="/Senalizacion-Digital/Pantallas-Profesionales">Pantallas Profesionales</a></li><li><a href="/Senalizacion-Digital/Pizarrones-Interactivos">Pizarrones Interactivos</a></li><li><a href="/Senalizacion-Digital/Senalizacion-Inteligente">Señalización Inteligente</a></li><li><a href="/Senalizacion-Digital/Video-Digital">Video Digital</a></li></ul></div><div class="col"><ul class="list-unstyled"><li class="pt-4 font-weight-bold">SEGURIDAD INTELIGENTE </li><li><a href="/Seguridad-Inteligente/Accesorios-de-Seguridad">Accesorios de Seguridad</a></li><li><a href="/Seguridad-Inteligente/Cercas-Electricas">Cercas Eléctricas</a></li><li><a href="/Seguridad-Inteligente/Cerraduras">Cerraduras</a></li><li><a href="/Seguridad-Inteligente/Control-de-Acceso">Control de Acceso</a></li><li><a href="/Seguridad-Inteligente/Paneles-para-Alarma">Paneles para Alarma</a></li><li><a href="/Seguridad-Inteligente/Paneles">Paneles Para Incendio</a></li><li><a href="/Seguridad-Inteligente/Sensores">Sensores</a></li><li><a href="/Video-Vigilancia">Video Vigilancia</a></li></ul></div><div class="col"><ul class="list-unstyled"><li class="pt-4 font-weight-bold">SERVIDORES </li><li><a href="/Servidores/Rack">Servidores Rack</a></li><li><a href="/Servidores/Torre">Servidores Torre</a></li><li><a href="/Servidores/Storage">Storage</a></li><li><a href="/Licenciamiento">Licenciamiento</a></li><li><a href="/Accesorios-para-Servidores">Accesorios para Servidores</a></li></ul></div>
+                </div>
+            </div>
+        </div>
+    </li>
+    <li class="nav-item">
+        <a href="#" class="nav-link">
+            Marcas
+        </a>
+        <div class="ps-mega-menu bg-light pb-3 shadow border-primary links-secondary">
+            <div class="container">
+                <div class="marcas-categories row">
+                </div>
+            </div>
+        </div>
+    </li>
+</ul>
+			<div class="d-none d-lg-flex">
+				<i class="fas fa-headset fa-2x fa-fw text-primary" style="position: relative; top: 8px;"></i>
+				<p class="m-0 ml-2"><b>Ventas y Cotizaciones</b><br>Llámenos al: 167-24-43</p>
+			</div>
+
+            <div class="d-lg-none">
+                <a class="mr-4">
+                    <i class="icon ion-ios-cart" style="font-size: 24px;"></i>
+                </a>
+                <a class="ps-side-menu-toggle">
+                    <i class="icon ion-ios-menu" style="font-size: 28px;"></i>
+                </a>
+            </div>
+
+		</div>
+	</div>
+	<!-- /MASTHEAD -->	
+
+	<!-- /SEARCH BAR -->
+	<div class="py-2 bg-primary">
+		<div class="container d-flex align-items-center justify-content-between">
+
+            <span class="d-none d-lg-block text-light font-weight-bold">
+                Categorías Populares
+                <i class="fas fa-chevron-down"></i>	
+            </span>
+
+			<div class="input-group ps-search-form">
+				<input type="text" class="form-control pl-4" placeholder="Buscar Producto..." aria-label="Buscar Producto" aria-describedby="basic-addon2">
+				<div class="input-group-append">
+					<button class="btn btn-dark px-4" role="button">
+                        <i class="icon ion-ios-search"></i>
+					</button>
+				</div>
+			</div>	
+
+            <a href="#" class="d-none d-lg-block text-light font-weight-bold">
+                <i class="icon ion-ios-cart mr-2" style="font-size: 24px;"></i>Carrito
+            </a>
+
+		</div>
+	</div>
+	<!-- /SEARCH BAR -->
+</header>
+
+<div class="ps-header-clearance"></div>
+<!-- /HEADER -->
+
+
+<!-- SIDE MENU -->
+<div class="ps-side-menu shadow-lg">
+    <a role="button" class="ps-side-menu-toggle border-bottom p-3 d-flex align-items-center justify-content-end">
+        <span>CERRAR MENÚ</span><i class="pl-4 icon ion-ios-arrow-round-forward" style="font-size: 28px;"></i>
+    </a>
+    <div class="ps-categories-side-menu">
+
+        <ul class="ml-accordion">
+          
+          <li>
+            <a class="toggle" href="javascript:void(0);">
+                departamento
+                <i class="float-right icon ion-ios-arrow-down"></i>
+            </a>
+            <ul class="inner">
+              <li>
+                <a href="#" class="toggle">
+                    categoria
+                <i class="float-right icon ion-ios-arrow-down"></i>
+                </a>
+                <ul class="inner">
+                    <li>
+                        <a href="#">
+                            sub categoria
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            sub categoria
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            sub categoria
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            sub categoria
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            sub categoria
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            sub categoria
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            sub categoria
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            sub categoria
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            sub categoria
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            sub categoria
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            sub categoria
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            sub categoria
+                        </a>
+                    </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a class="toggle" href="javascript:void(0);">
+                departamento
+                <i class="float-right icon ion-ios-arrow-down"></i>
+            </a>
+            <ul class="inner">
+              <li>
+                <a href="#" class="toggle">
+                    categoria
+                <i class="float-right icon ion-ios-arrow-down"></i>
+                </a>
+                <ul class="inner">
+                    <li>
+                        <a href="#">
+                            sub categoria
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            sub categoria
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            sub categoria
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            sub categoria
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            sub categoria
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            sub categoria
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            sub categoria
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            sub categoria
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            sub categoria
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            sub categoria
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            sub categoria
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            sub categoria
+                        </a>
+                    </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a class="toggle" href="javascript:void(0);">
+                departamento
+                <i class="float-right icon ion-ios-arrow-down"></i>
+            </a>
+            <ul class="inner">
+              <li>
+                <a href="#" class="toggle">
+                    categoria
+                <i class="float-right icon ion-ios-arrow-down"></i>
+                </a>
+                <ul class="inner">
+                    <li>
+                        <a href="#">
+                            sub categoria
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            sub categoria
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            sub categoria
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            sub categoria
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            sub categoria
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            sub categoria
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            sub categoria
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            sub categoria
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            sub categoria
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            sub categoria
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            sub categoria
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            sub categoria
+                        </a>
+                    </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a class="toggle" href="javascript:void(0);">
+                departamento
+                <i class="float-right icon ion-ios-arrow-down"></i>
+            </a>
+            <ul class="inner">
+              <li>
+                <a href="#" class="toggle">
+                    categoria
+                <i class="float-right icon ion-ios-arrow-down"></i>
+                </a>
+                <ul class="inner">
+                    <li>
+                        <a href="#">
+                            sub categoria
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            sub categoria
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            sub categoria
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            sub categoria
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            sub categoria
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            sub categoria
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            sub categoria
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            sub categoria
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            sub categoria
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            sub categoria
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            sub categoria
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            sub categoria
+                        </a>
+                    </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          
+        </ul>
+
+    </div>
+</div>
+<!-- /SIDE MENU -->
+
+
+<!-- CONTENT BLOCK -->
+<div class="container">
+
+    <!-- BREADCRUMB -->
+    <nav class="links-secondary text-secondary py-4">
+        <a href="#">Inicio</a>
+        <i class="fas fa-chevron-right fa-xs px-3"></i>
+        <a href="#">Computadoras</a>
+        <i class="fas fa-chevron-right fa-xs px-3"></i>
+        <a href="#">Laptops</a>
+    </nav>
+    <!-- /BREADCRUMB -->
+
+    <!-- TITLE -->
+    <h1 class="h4">Laptop HP 15-A</h1>
+    <!-- /TITLE -->
+
+    <hr>
+
+    <p>Clave: COMPQCP9060</p>
+   
+    <div class="row">
+        <div class="col-12 col-lg-6">
+            <!-- IMAGE SLIDER -->
+            <ul id="lightSlider">
+                <li data-thumb="images/final/impresora.jpg" data-src="images/final/impresora.jpg">
+                    <img class="img-fluid" src="images/final/impresora.jpg">
+                </li>
+                <li data-thumb="images/final/impresora.jpg" data-src="images/final/impresora.jpg">
+                    <img class="img-fluid" src="images/final/impresora.jpg">
+                </li>
+                <li data-thumb="images/final/impresora.jpg" data-src="images/final/impresora.jpg">
+                    <img class="img-fluid" src="images/final/impresora.jpg">
+                </li>
+                <li data-thumb="images/final/impresora.jpg" data-src="images/final/impresora.jpg">
+                    <img class="img-fluid" src="images/final/impresora.jpg">
+                </li>
+                <li data-thumb="images/final/impresora.jpg" data-src="images/final/impresora.jpg">
+                    <img class="img-fluid" src="images/final/impresora.jpg">
+                </li>
+            </ul>
+            <!-- /IMAGE SLIDER -->
+        </div>
+        <div class="col-12 col-lg-6">
+            <!-- SPECS -->
+            <div class="container border mb-3 mt-4 mt-lg-0">
+                <h6 class="font-weight-bold my-3">Especificaciones:</h6>
+                <table class="table">
+                    <tbody>
+                        <tr><td>Capacidad de Disco Duro</td><td>1 TB</td></tr>
+                        <tr><td>Familia de Procesador</td><td>Intel Core i3</td></tr>
+                        <tr><td>Memoria Interna</td><td>4 GB</td></tr>
+                        <tr><td>Sistema Operativo</td><td>Windows 10 Pro</td></tr>
+                        <tr><td>Unidad Optica</td><td>DVD+RW</td></tr>
+                    </tbody>
+                </table>
+            </div>
+            <!-- /SPECS -->
+
+            <!-- PRICE -->
+            <div class="border clearfix container py-3 my-4">
+                <h6 class="font-weight-bold">Precio:</h6>
+                <hr>
+                <p class="h2 font-weight-bold d-inline">$14,000 <span class="ps-product-currency">MXN</span></p>
+                <p class="text-success float-right mr-4 pt-2"><i class="fas fa-check"></i> En Existencia</p>
+            </div>
+            <!-- PRICE -->
+
+            <a href="#" class="btn btn-warning btn-block btn-lg font-weight-bold px-5 mb-4">
+                <i class="icon ion-ios-cart mr-2"></i>Añadir al Carrito
+            </a>
+
+        </div>
+    </div>
+
+    <div class="container border py-3 my-4">
+        <h6 class="font-weight-bold">Ficha Técnica:</h6>
+        <hr>
+<div id='ficha_tecnica' class='ct-section'><div class='row'><div class='col-sm-6'><h5>Exhibici\u00f3n</h5><div class='row'><div class='col-xs-12 col-sm-6'><strong> Diagonal de la pantalla</strong></div><div class='col-xs-12 col-sm-6'> 47 cm (18.5') </div></div><div class='row'><div class='col-xs-12 col-sm-6'><strong> Brillo de pantalla</strong></div><div class='col-xs-12 col-sm-6'> 200 cd / m\u00b2 </div></div><div class='row'><div class='col-xs-12 col-sm-6'><strong> Resoluci\u00f3n de la pantalla</strong></div><div class='col-xs-12 col-sm-6'> 1366 x 768 Pixeles </div></div><div class='row'><div class='col-xs-12 col-sm-6'><strong> Tiempo de respuesta</strong></div><div class='col-xs-12 col-sm-6'> 5 ms </div></div><div class='row'><div class='col-xs-12 col-sm-6'><strong> Pantalla</strong></div><div class='col-xs-12 col-sm-6'> LED </div></div><div class='row'><div class='col-xs-12 col-sm-6'><strong> Formatos gr\u00e1ficos soportados</strong></div><div class='col-xs-12 col-sm-6'> 1366 x 768 </div></div><div class='row'><div class='col-xs-12 col-sm-6'><strong> Raz\u00f3n de contraste (t\u00edpica)</strong></div><div class='col-xs-12 col-sm-6'> 700:1 </div></div><div class='row'><div class='col-xs-12 col-sm-6'><strong> Relaci\u00f3n de contraste (din\u00e1mico)</strong></div><div class='col-xs-12 col-sm-6'> 20000000:1 </div></div><div class='row'><div class='col-xs-12 col-sm-6'><strong> \u00c1ngulo de visi\u00f3n, horizontal</strong></div><div class='col-xs-12 col-sm-6'> 90\u00b0 </div></div><div class='row'><div class='col-xs-12 col-sm-6'><strong> \u00c1ngulo de visi\u00f3n, vertical</strong></div><div class='col-xs-12 col-sm-6'> 50\u00b0 </div></div><div class='row'><div class='col-xs-12 col-sm-6'><strong> N\u00famero de colores de la pantalla</strong></div><div class='col-xs-12 col-sm-6'> 16,78 millones de colores </div></div><div class='row'><div class='col-xs-12 col-sm-6'><strong> Relaci\u00f3n de aspecto nativa</strong></div><div class='col-xs-12 col-sm-6'> 16:9 </div></div><div class='row'><div class='col-xs-12 col-sm-6'><strong> Relaci\u00f3n de aspecto</strong></div><div class='col-xs-12 col-sm-6'> 16:9 </div></div><div class='row'><div class='col-xs-12 col-sm-6'><strong> 3D</strong></div><div class='col-xs-12 col-sm-6'><td><i class='fa fa-times-circle text-red'></i></td></div></div><div class='row'><div class='col-xs-12 col-sm-6'><strong> Diagonal de pantalla</strong></div><div class='col-xs-12 col-sm-6'> 47 cm </div></div><div class='row'><div class='col-xs-12 col-sm-6'><strong> Tama\u00f1o de pixel</strong></div><div class='col-xs-12 col-sm-6'> 0,3 x 0,3 mm </div></div><div class='row'><div class='col-xs-12 col-sm-6'><strong> Intervalo de escaneado horizontal</strong></div><div class='col-xs-12 col-sm-6'> 30 - 60 kHz </div></div><div class='row'><div class='col-xs-12 col-sm-6'><strong> Intervalo de escaneado vertical</strong></div><div class='col-xs-12 col-sm-6'> 50 - 76 Hz </div></div><div class='row'><div class='col-xs-12 col-sm-6'><strong> Tama\u00f1o visible, horizontal</strong></div><div class='col-xs-12 col-sm-6'> 41 cm </div></div><div class='row'><div class='col-xs-12 col-sm-6'><strong> Tama\u00f1o visible, vertical</strong></div><div class='col-xs-12 col-sm-6'> 23 cm </div></div><div class='row'><div class='col-xs-12 col-sm-6'><strong> HDCP</strong></div><div class='col-xs-12 col-sm-6'><td><i class='fa fa-times-circle text-red'></i></td></div></div><div class='row'><div class='col-xs-12 col-sm-6'><strong> Tipo de retroiluminaci\u00f3n</strong></div><div class='col-xs-12 col-sm-6'> W-LED </div></div></div><div class='col-sm-6'><h5>Puertos e Interfaces</h5><div class='row'><div class='col-xs-12 col-sm-6'><strong> Cantidad de puertos VGA (D-Sub)</strong></div><div class='col-xs-12 col-sm-6'> 1 </div></div><div class='row'><div class='col-xs-12 col-sm-6'><strong> Puerto DVI</strong></div><div class='col-xs-12 col-sm-6'><td><i class='fa fa-times-circle text-red'></i></td></div></div><div class='row'><div class='col-xs-12 col-sm-6'><strong> Entrada de CA</strong></div><div class='col-xs-12 col-sm-6'><td><i class='fa fa-check-circle text-green'></i></td></div></div></div></div></div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+<!-- CONTENT BLOCK -->
+
+<!-- FOOTER -->
+<footer>
+	<!-- FOOTER LINKS -->
+	<div class="text-light py-6 bg-dark">
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-6 col-md-3">
+					<h4>Compañía</h4>
+					<hr class="border-light">
+					<a class="d-block" href="#home">Inicio</a>
+					<a class="d-block" href="#services-section">Servicios</a>
+					<a class="d-block" href="#clients-section">Clientes</a>
+					<a class="d-block" href="#contact-section">Contacto</a>
+				</div>
+
+				<div class="col-sm-6 col-md-3 mt-5 mt-sm-0">
+					<h4>Servicios</h4>
+					<hr class="border-light">
+					<a class="d-block" href="#contacto">Telefonía</a>
+					<a class="d-block" href="#contacto">Telefonía SIP</a>
+					<a class="d-block" href="#contacto">Video Vigilancia</a>
+					<a class="d-block" href="#contacto">Cableado de Red</a>
+					<a class="d-block" href="#contacto">Control de Acceso</a>
+					<a class="d-block" href="#contacto">Alarmas</a>
+				</div>
+				
+				<div class="col-sm-6 col-md-3 mt-5 mt-md-0">
+					<h4>Tienda</h4>
+					<hr class="border-light">
+					<a class="d-block" href="#contacto">Hardware</a>
+					<a class="d-block" href="#contacto">Software</a>
+					<a class="d-block" href="#contacto">Soluciones</a>
+					<a class="d-block" href="#contacto">Marcas</a>
+					<a class="d-block" href="#contacto">Ofertas</a>
+				</div>
+
+
+				<div class="ps-certifications col-sm-6 col-md-3 text-center text-white-50 mt-5 mt-md-0">
+					<a href="http://www.grandstream.com/"><img class="img-fluid" src="images/final/grandstream-logo.png"></a>
+					<p>Grandstream Certified Expert</p>
+
+					<a href="https://www.panasonic.com/mx/"><img class="img-fluid mt-4" src="images/final/panasonic-logo2.png"></a>
+					<p>Distribuidor Autorizado</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- /FOOTER LINKS -->
+
+	<!-- FOOTER BOTTOM -->
+	<div id="footer-bottom" class="text-center bg-gray-900 py-4 text-white-50">
+		Copyright &copy; 2018 Panasistemas
+	</div>
+	<!-- /FOOTER BOTTOM -->
+</footer>
+<!-- FOOTER -->
+
+
+</body>
+</html> 
